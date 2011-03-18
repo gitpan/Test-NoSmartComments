@@ -12,7 +12,7 @@ BEGIN {
   $Test::NoSmartComments::AUTHORITY = 'cpan:RSRCHBOY';
 }
 BEGIN {
-  $Test::NoSmartComments::VERSION = '0.002';
+  $Test::NoSmartComments::VERSION = '0.003';
 }
 
 # ABSTRACT: Make sure no Smart::Comments escape into the wild
@@ -64,7 +64,7 @@ Test::NoSmartComments - Make sure no Smart::Comments escape into the wild
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 

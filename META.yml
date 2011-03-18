@@ -2,7 +2,17 @@
 abstract: 'Make sure no Smart::Comments escape into the wild'
 author:
   - 'Chris Weyl <cweyl@alumni.drew.edu>'
-build_requires: {}
+build_requires:
+  Carp: 0
+  File::Find: 0
+  File::Temp: 0
+  File::chdir: 0
+  FindBin: 0
+  Scalar::Util: 0
+  Smart::Comments: 0
+  Test::Builder::Tester: 0
+  Test::More: 0.94
+  perl: 5.004
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
@@ -13,39 +23,41 @@ meta-spec:
   version: 1.4
 name: Test-NoSmartComments
 requires:
+  ExtUtils::Manifest: 0
   Module::ScanDeps: 0
+  Test::Builder::Module: 0
   perl: 5.006
 resources:
   bugtracker: https://github.com/RsrchBoy/Test-NoSmartComments/issues
   homepage: http://search.cpan.org/dist/Test-NoSmartComments/
   repository: git://github.com/RsrchBoy/Test-NoSmartComments.git
-version: 0.002
+version: 0.003
 x_Dist_Zilla:
   plugins:
     -
+      class: Dist::Zilla::Plugin::NextRelease
+      name: NextRelease
+      version: 4.200004
+    -
       class: Dist::Zilla::Plugin::Git::Check
-      name: '@Git/Check'
+      name: Git::Check
       version: 1.110500
     -
       class: Dist::Zilla::Plugin::Git::Commit
-      name: '@Git/Commit'
+      name: Git::Commit
       version: 1.110500
     -
       class: Dist::Zilla::Plugin::Git::Tag
-      name: '@Git/Tag'
+      name: Git::Tag
       version: 1.110500
     -
       class: Dist::Zilla::Plugin::Git::Push
-      name: '@Git/Push'
+      name: Git::Push
       version: 1.110500
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
       name: Git::NextVersion
       version: 1.110500
-    -
-      class: Dist::Zilla::Plugin::NextRelease
-      name: NextRelease
-      version: 4.200004
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: GatherDir
@@ -139,6 +151,10 @@ x_Dist_Zilla:
       name: Prepender
       version: 1.103470
     -
+      class: Dist::Zilla::Plugin::AutoPrereqs
+      name: AutoPrereqs
+      version: 4.200004
+    -
       class: Dist::Zilla::Plugin::Authority
       name: Authority
       version: 1.004
@@ -190,14 +206,6 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::InstallRelease
       name: InstallRelease
       version: 0.006
-    -
-      class: Dist::Zilla::Plugin::Prereqs
-      config:
-        Dist::Zilla::Plugin::Prereqs:
-          phase: runtime
-          type: requires
-      name: Prereqs
-      version: 4.200004
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

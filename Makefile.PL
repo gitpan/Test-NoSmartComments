@@ -11,7 +11,18 @@ use ExtUtils::MakeMaker 6.31;
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'Make sure no Smart::Comments escape into the wild',
   'AUTHOR' => 'Chris Weyl <cweyl@alumni.drew.edu>',
-  'BUILD_REQUIRES' => {},
+  'BUILD_REQUIRES' => {
+    'Carp' => '0',
+    'File::Find' => '0',
+    'File::Temp' => '0',
+    'File::chdir' => '0',
+    'FindBin' => '0',
+    'Scalar::Util' => '0',
+    'Smart::Comments' => '0',
+    'Test::Builder::Tester' => '0',
+    'Test::More' => '0.94',
+    'perl' => '5.004'
+  },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
   },
@@ -20,9 +31,11 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'lgpl',
   'NAME' => 'Test::NoSmartComments',
   'PREREQ_PM' => {
-    'Module::ScanDeps' => '0'
+    'ExtUtils::Manifest' => '0',
+    'Module::ScanDeps' => '0',
+    'Test::Builder::Module' => '0'
   },
-  'VERSION' => '0.002',
+  'VERSION' => '0.003',
   'test' => {
     'TESTS' => 't/*.t'
   }

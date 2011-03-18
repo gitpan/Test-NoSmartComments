@@ -27,7 +27,7 @@ find(
     $found =~ s{^lib/}{};
     $found =~ s{[/\\]}{::}g;
     $found =~ s/\.pm$//;
-    return if $found =~ /MooseX::AutoDestruct::Trait.*/;
+    # nothing to skip
     push @modules, $found;
   },
   'lib',
