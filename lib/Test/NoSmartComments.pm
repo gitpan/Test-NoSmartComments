@@ -12,7 +12,7 @@ BEGIN {
   $Test::NoSmartComments::AUTHORITY = 'cpan:RSRCHBOY';
 }
 BEGIN {
-  $Test::NoSmartComments::VERSION = '0.001';
+  $Test::NoSmartComments::VERSION = '0.002';
 }
 
 # ABSTRACT: Make sure no Smart::Comments escape into the wild
@@ -64,16 +64,14 @@ Test::NoSmartComments - Make sure no Smart::Comments escape into the wild
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
     use Test::More;
-    eval "use Test::HasVersion";
-    plan skip_all =>
-        'Test::NoSmartComments required for testing for version numbers'
-        if $@
-        ;
+    eval "use Test::NoSmartComments";
+    plan skip_all => 'Test::NoSmartComments required for checking comment IQ'
+        if $@ ;
 
     no_smart_comments_in;
     done_testing;

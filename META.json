@@ -31,13 +31,14 @@
       "bugtracker" : {
          "web" : "https://github.com/RsrchBoy/Test-NoSmartComments/issues"
       },
+      "homepage" : "http://search.cpan.org/dist/Test-NoSmartComments/",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/RsrchBoy/Test-NoSmartComments.git",
          "web" : "https://github.com/RsrchBoy/Test-NoSmartComments"
       }
    },
-   "version" : "0.001",
+   "version" : "0.002",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
