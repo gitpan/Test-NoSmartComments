@@ -12,7 +12,7 @@ BEGIN {
   $Test::NoSmartComments::AUTHORITY = 'cpan:RSRCHBOY';
 }
 BEGIN {
-  $Test::NoSmartComments::VERSION = '0.003';
+  $Test::NoSmartComments::VERSION = '0.004';
 }
 
 # ABSTRACT: Make sure no Smart::Comments escape into the wild
@@ -64,7 +64,7 @@ Test::NoSmartComments - Make sure no Smart::Comments escape into the wild
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
@@ -88,7 +88,8 @@ get away!
 
 =head2 no_smart_comments_in($file)
 
-Called with a file name, this function scans it for any smart comments.
+Called with a file name, this function scans it for the use of
+L<the Smart::Comments module|Smart::Comments>.
 
 =head2 no_smart_comments_in_all()
 

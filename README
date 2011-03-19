@@ -3,7 +3,7 @@ NAME
     wild
 
 VERSION
-    version 0.003
+    version 0.004
 
 SYNOPSIS
         use Test::More;
@@ -23,7 +23,8 @@ DESCRIPTION
 
 FUNCTIONS
   no_smart_comments_in($file)
-    Called with a file name, this function scans it for any smart comments.
+    Called with a file name, this function scans it for the use of the
+    Smart::Comments module.
 
   no_smart_comments_in_all()
     no_smart_comments_in_all() scans the MANIFEST for all matching

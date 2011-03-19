@@ -54,7 +54,7 @@
          "web" : "https://github.com/RsrchBoy/Test-NoSmartComments"
       }
    },
-   "version" : "0.003",
+   "version" : "0.004",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
