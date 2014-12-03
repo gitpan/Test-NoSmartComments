@@ -3,7 +3,8 @@ NAME
     wild
 
 VERSION
-    version 0.004
+    This document describes version 0.005 of Test::NoSmartComments -
+    released December 02, 2014 as part of Test-NoSmartComments.
 
 SYNOPSIS
         use Test::More;
@@ -26,15 +27,50 @@ FUNCTIONS
     Called with a file name, this function scans it for the use of the
     Smart::Comments module.
 
-  no_smart_comments_in_all()
+  no_smart_comments_in_all
     no_smart_comments_in_all() scans the MANIFEST for all matching
     qr!^lib/.*.pm$! and issues a pass or fail for each.
 
+  no_smart_comments_in_tests
+    Like no_smart_comments_in_all(), we scan the MANIFEST for all files
+    matching qr!^lib/.*.t$! and issues a pass or fail for each.
+
 SEE ALSO
-    Smart::Comments, Dist::Zilla::Plugin::NoSmartCommentsTests
+    Please see those modules/websites for more information related to this
+    module.
+
+    *   Smart::Comments, Dist::Zilla::Plugin::NoSmartCommentsTests
+
+SOURCE
+    The development version is on github at
+    <http://https://github.com/RsrchBoy/Test-NoSmartComments> and may be
+    cloned from <git://https://github.com/RsrchBoy/Test-NoSmartComments.git>
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    https://github.com/RsrchBoy/Test-NoSmartComments/issues
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
 
 AUTHOR
     Chris Weyl <cweyl@alumni.drew.edu>
+
+  I'm a material boy in a material world
+    Please note I do not expect to be gittip'ed or flattr'ed for this work,
+    rather it is simply a very pleasant surprise. I largely create and
+    release works like this because I need them or I find it enjoyable;
+    however, don't let that stop you if you feel like it ;)
+
+    Flattr this
+    <https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithu
+    b.com%2FRsrchBoy%2FTest-NoSmartComments&title=RsrchBoy's%20CPAN%20Test-N
+    oSmartComments&tags=%22RsrchBoy's%20Test-NoSmartComments%20in%20the%20CP
+    AN%22>, gittip me <https://www.gittip.com/RsrchBoy/>, or indulge my
+    Amazon Wishlist <http://bit.ly/rsrchboys-wishlist>... If you so desire.
+
+CONTRIBUTOR
+    Douglas Christopher Wilson <doug@somethingdoug.com>
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2011 by Chris Weyl.
